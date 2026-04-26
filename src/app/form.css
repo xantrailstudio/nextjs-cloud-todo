@@ -63,3 +63,21 @@
 .background-lightgrey{
     background-color: var(--lightgrey);
 }
+
+.form-title{
+    height: 20%;
+}
+
+.form-title h1{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--darkgrey);
+}
+
+.form-title-side-decoration{
+    height: 10px;
+    width: 100px;
+    background-color: var(--darkgrey);
+    margin: 0px 20px;
+    border-radius: 10%;
+}

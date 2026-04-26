@@ -6,8 +6,12 @@ export default function Signup() {
   return (
     <>
       <div className="justify-center align-center width-full height-full flex background-lightgrey">
-        <div className="signup-form background-white">
-          <h1 className="form-title text-center">Signup to Cloud Todo</h1>
+        <div className="signup-form background-white flex flex-column">
+          <div className="form-title text-center flex align-center justify-center">
+            <span className="form-title-side-decoration"></span>
+            <h1>Signup to Cloud Todo</h1>
+            <span className="form-title-side-decoration"></span>
+          </div>
           <div className="form flex flex-column">
             <div className="email-input-box">
               <label htmlFor="email">User Email</label>
