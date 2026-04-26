@@ -1,0 +1,65 @@
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --lightgrey: #999999;
+  --darkgrey: #222222;
+  --midgrey: #555555;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.align-center{
+    align-items: center;
+}
+
+.width-full{
+    width: 100vw;
+}
+
+.height-full{
+    height: 100vh;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.form{
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex{
+    display: flex;
+}
+
+.input{
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.signup-form{
+    border-radius: 10px;
+    width: 75vw;
+    height: 75vh;
+}
+
+.background-white{
+    background-color: var(--white);
+}
+
+.background-midgrey{
+    background-color: var(--midgrey);
+}
+
+.background-lightgrey{
+    background-color: var(--lightgrey);
+}
