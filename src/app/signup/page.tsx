@@ -7,17 +7,26 @@ import backgroundImage from "@/app/form-bg.jpg";
 import { auth } from "@/lib/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
+import { useRouter } from "next/navigation"; // Import the router
 
 export default function Signup() {
-  async function createUser(){
-    try{
-    await createUserWithEmailAndPassword(auth, gmail, password);
-    } catch(e){
-      alert("Error Creating User with Email and password [/signup/page.tsx]: " + e)
-    }
-  };
   const [gmail, setGmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter(); // Initialize the router
+
+  async function createUser() {
+    try {
+      await createUserWithEmailAndPassword(auth, gmail, password);
+      // Move to the homepage after successful signup
+      router.push("/");
+    } catch (e) {
+      alert(
+        "Error Creating User with Email and password [/signup/page.tsx]: " +
+          e,
+      );
+    }
+  }
+
   return (
     <>
       <Image
@@ -39,16 +48,16 @@ export default function Signup() {
                 type="text"
                 id="email"
                 className="input input-text border-1-solid-white"
-                onChange={(e)=>setGmail(e.target.value)}
+                onChange={(e) => setGmail(e.target.value)}
               />
             </div>
             <div className="password-input-box flex flex-column margin-top-12">
               <label htmlFor="password">User Password</label>
               <input
-                type="text"
+                type="password" // Recommended for security
                 id="password"
                 className="input input-password border-1-solid-white"
-                onChange={(e)=>setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <button
@@ -57,6 +66,15 @@ export default function Signup() {
             >
               Submit
             </button>
+            <p className="margin-top-12 text-center">
+              Already have an account?{" "}
+              <a
+                href="/login"
+                style={{ color: "var(--blue)", textDecoration: "underline" }}
+              >
+                Login here
+              </a>
+            </p>
           </div>
         </div>
       </div>

@@ -2,9 +2,9 @@
 
 import "@/app/form.css";
 import Image from "next/image";
-import backgroundImage from "@/app/form-bg.jpg"; // Reusing your background
+import backgroundImage from "@/app/form-bg.jpg";
 
-import { auth } from "@/lib/firebase"; // Importing your configured auth
+import { auth } from "@/lib/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
