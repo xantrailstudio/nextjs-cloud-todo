@@ -1,5 +1,9 @@
 import "@/app/dashboard.css";
 
 export default function Dashboard(){
-    return "Dashboard Page"
+    return (
+        <>
+          <p>Dashbaord</p>
+        </>
+    );
 }

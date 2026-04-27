@@ -1,0 +1,21 @@
+.navbar{
+    width: 100vw;
+    padding: 10px 20px;
+    border-bottom: 2px solid black;
+}
+
+.navbar-title h1{
+    font-size: 25px;
+    font-weight: bold;   
+}
+
+.justify-space-between{
+    justify-content: space-between;
+}
+
+.width-25vw{
+    width: 25vw;
+}
+.width-35vw{
+    width: 35vw;
+}
