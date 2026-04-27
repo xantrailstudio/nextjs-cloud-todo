@@ -1,16 +1,23 @@
 "use client";
 
 import "@/app/form.css";
+import Image from "next/image";
+import backgroundImage from "@/app/form-bg.jpg";
 
 export default function Signup() {
   return (
     <>
-      <div className="justify-center align-center width-full height-full flex background-lightgrey">
-        <div className="signup-form background-white flex flex-column">
-          <div className="form-title text-center flex align-center justify-center">
-            <span className="form-title-side-decoration"></span>
+      <Image
+        src={backgroundImage}
+        alt="Background Image"
+        className="background-img"
+      />
+      <div className="justify-center align-center width-full height-full flex background-transparent color-white">
+        <div className="signup-form background-transparent background-blur flex flex-column padding-25">
+          <div className="form-title text-center flex align-center justifyenter">
+            <span className="form-title-side-decoration-white"></span>
             <h1>Signup to Cloud Todo</h1>
-            <span className="form-title-side-decoration"></span>
+            <span className="form-title-side-decoration-white"></span>
           </div>
           <div className="form flex flex-column">
             <div className="email-input-box">
