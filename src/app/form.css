@@ -4,6 +4,7 @@
   --lightgrey: #999999;
   --darkgrey: #222222;
   --midgrey: #555555;
+  --blue: rgb(0, 94, 255);
 }
 
 .justify-center {
@@ -154,4 +155,69 @@
 
 .color-white h1{
     color: white !important;
+}
+
+.border-1-solid-black{
+    border: 1px solid black;
+}
+.border-1-solid-white{
+    border: 1px solid white;
+}
+
+.btn-transparent{
+    background-color: transparent !important;
+}
+
+.btn-transparent-white{
+    background-color: transparent;
+    color: white !important;
+    border: 1px solid white !important;
+    border-radius: 10px;
+    padding: 5px 20px;
+    transition: 0.5s;
+}
+.btn-transparent-white:hover{
+    background-color: white;
+    color: blue;
+}
+
+.btn{
+    outline: none;
+    border: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 20px;
+    color: black;
+    transition: 0.3s;
+    background-color: wheat;
+    user-select: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+.margin-top-100{
+    margin-top: 100px;
+}
+.margin-top-75{
+    margin-top: 75px;
+}
+.margin-top-50{
+    margin-top: 50px;
+}
+.margin-top-25{
+    margin-top: 25px;
+}
+.margin-top-12{
+    margin-top: 12px;
+}
+
+.color-blue{
+    color: var(--blue)
 }
