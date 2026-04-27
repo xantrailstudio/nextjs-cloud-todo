@@ -7,18 +7,17 @@ import backgroundImage from "@/app/form-bg.jpg";
 import { auth } from "@/lib/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
-import { useRouter } from "next/navigation"; // Import the router
+import { useRouter } from "next/navigation";
 
 export default function Signup() {
   const [gmail, setGmail] = useState("");
   const [password, setPassword] = useState("");
-  const router = useRouter(); // Initialize the router
+  const router = useRouter();
 
   async function createUser() {
     try {
       await createUserWithEmailAndPassword(auth, gmail, password);
-      // Move to the homepage after successful signup
-      router.push("/");
+      router.push("/dashboard");
     } catch (e) {
       alert(
         "Error Creating User with Email and password [/signup/page.tsx]: " +

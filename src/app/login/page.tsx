@@ -23,7 +23,7 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Login Successful!");
-      router.push("/");
+      router.push("/dashboard");
     } catch (e) {
       alert("Error Logging In [/login/page.tsx]: " + e);
     }
